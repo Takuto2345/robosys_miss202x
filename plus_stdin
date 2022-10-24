@@ -2,13 +2,24 @@
 
 import sys
 
-ans = 0.0
+def tonum(s):
+
+    try:
+        return  int(s)
+    except:
+        return  float(s)
+
+ans = 0
 
 for line in sys.stdin:
+<<<<<<< HEAD
     line = line.rstrip()
     try:
         ans += int(line)
     except:
         ans += float(line)
+=======
+    ans += tonum(line)
+>>>>>>> be3265638628d5f14311d713290b22cc073aaa65
 
 print(ans)
